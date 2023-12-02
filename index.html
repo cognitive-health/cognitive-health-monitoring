@@ -17,8 +17,7 @@
             <header id="header">
                 <div class="inner">
                     <h1><strong>Keystroke Health Monitor</strong><br />
-                    An innovative app for monitoring cognitive health<br />
-                    through keystroke dynamics.</h1>
+                    An innovative app for monitoring cognitive health through keystroke dynamics.</h1>
                 </div>
             </header>
 
@@ -44,7 +43,7 @@
                                 <div class="col-6 col-12-xsmall"><input type="text" name="cc-cvc" id="cc-cvc" placeholder="Security Code" /></div>
                                 <div class="col-12">
                                     <ul class="actions">
-                                        <li><input type="submit" value="Submit Payment" class="primary" /></li>
+                                        <input type="button" value="Submit Payment" class="primary" onclick="showPopup()" />
                                     </ul>
                                 </div>
                                 <div class="col-12">
@@ -53,6 +52,18 @@
                             </div>
                         </form>
                     </section>
+                
+                <!-- Pop-up Article -->
+                <article id="thankYouPopup" style="display:none;">
+                    <h2>Thank You for Your Support</h2>
+                    <p>Your credit card was NOT charged, and NONE of your information was saved. This product does not exist. While there is promising research in keystroke dynamics for cognitive health monitoring, this specific product is currently not on the market.</p>
+                    <ul class="actions">
+                        <li><a href="link-to-research" class="button">Learn More About Our Research</a></li>
+                    </ul>
+                    <button onclick="closePopup()">Close</button>
+                </article>
+
+
             </div>
 
         <!-- Footer -->
@@ -77,6 +88,17 @@
             <script src="assets/js/breakpoints.min.js"></script>
             <script src="assets/js/util.js"></script>
             <script src="assets/js/main.js"></script>
+        
+        <script>
+            function showPopup() {
+                document.getElementById('thankYouPopup').style.display = 'block';
+            }
+        
+            function closePopup() {
+                document.getElementById('thankYouPopup').style.display = 'none';
+            }
+        </script>
+
 
     </body>
 </html>
